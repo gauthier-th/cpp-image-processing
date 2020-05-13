@@ -25,3 +25,9 @@ Notre application permet d’effectuer différents traitements sur une image sou
 ▪ Segmentations d’images :  
 - *Opérations de seuillages* 
 - *Segmentation par croissance de région*
+
+## Diagramme UML 
+
+```mermaid
+classDiagram Test <|-- Test1
+```
