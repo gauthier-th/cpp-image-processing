@@ -2,11 +2,11 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-### Vue d'ensemble
+## Vue d'ensemble
 
 Notre application permet d’effectuer différents traitements sur une image source. L’utilisateur peut définir les différents traitements qu’il souhaite appliquer à son image via un menu qu’il lui permettra d’effectuer sa sélection. L’utilisateur peut prévisualiser l’image avant d’enregistrer son image avec les différents traitements appliquées à celle-ci.
 
-### Traitements d'image prochainement disponibles
+## Traitements d'image prochainement disponibles
 
  ▪ Filtrage : 
 - *Filtre médian* 
@@ -28,5 +28,5 @@ Notre application permet d’effectuer différents traitements sur une image sou
 
 ## Diagramme UML 
 
-À venir !
+![](https://yuml.me/tomrh/uml.png)
 
