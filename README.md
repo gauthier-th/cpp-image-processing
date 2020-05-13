@@ -28,6 +28,5 @@ Notre application permet d’effectuer différents traitements sur une image sou
 
 ## Diagramme UML 
 
-```mermaid
-classDiagram Test <|-- Test1
-```
+À venir !
+
