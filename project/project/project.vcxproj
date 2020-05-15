@@ -99,10 +99,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\opencv\build\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\opencv\build\x64\vc14\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_world430d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -140,6 +143,7 @@
   <ItemGroup>
     <ClCompile Include="application.cpp" />
     <ClCompile Include="controller.cpp" />
+    <ClCompile Include="image.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="observer.cpp" />
     <ClCompile Include="subject.cpp" />
@@ -149,6 +153,7 @@
   <ItemGroup>
     <ClInclude Include="application.h" />
     <ClInclude Include="controller.h" />
+    <ClInclude Include="image.h" />
     <ClInclude Include="observer.h" />
     <ClInclude Include="subject.h" />
     <ClInclude Include="view.h" />
