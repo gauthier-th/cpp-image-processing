@@ -10,7 +10,7 @@ ViewMenu::ViewMenu(const std::string& _title, Controller* _controller): View(_ti
 
 void ViewMenu::notify()
 {
-	if (this->controller->getCurrentScreen() == 0)
+	if (this->controller->getCurrentScreen() == 1)
 		this->display();
 }
 
@@ -19,19 +19,6 @@ void ViewMenu::display()
 	std::string command = "TITLE ";
 	std::string titleCommand = command + this->getTitle();
 	system(titleCommand.c_str());
-	std::string name;
-	Image* img = new Image();
-	bool imageLoaded = false;
-	this->clear();
-	do {
-		std::cout << "Entrez le chemin de l'image :" << std::endl;
-		std::cin >> name;
-		img->setName(name);
-		imageLoaded = img->loadImage();
-		this->clear();
-		if (!imageLoaded)
-			std::cout << "Impossible de trouver l'image." << std::endl;
-	} while (!imageLoaded);
 	int choice = 0;
 	while (choice != 9) {
 		this->clear();
@@ -55,5 +42,5 @@ void ViewMenu::display()
 		}
 
 	}
-	this->controller->setScreen(choice);
+	this->controller->setScreen(choice + 1);
 }

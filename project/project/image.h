@@ -1,17 +1,19 @@
-#include "controller.h"
 #include <string>
+#include <opencv2/opencv.hpp>
 
-class Image : public Controller
+class Image
 {
 private:
-	std::string name;
-	int statut;
+	std::string path;
+	bool loaded = false;
+	cv::Mat img;
 public:
 	Image();
-	std::string getName();
-	void setName(std::string _name);
-	bool loadImage();
-	void copy(Image* _image);
-	void setGaussian(Image* _image);
+	std::string getPath();
+	void setPath(std::string _path);
+	void loadImage();
+	bool isLoaded();
+	cv::Mat getImage();
+	void copy();
+	void setGaussian();
 };
-

@@ -1,50 +1,57 @@
 #include "image.h"
-#include <opencv2/opencv.hpp>
 #include <iostream>
 
 using namespace cv;
 
 Image::Image()
 {
-	name = "default";
 }
 
-std::string Image::getName()
+std::string Image::getPath()
 {
-	return name;
+	return this->path;
 }
 
-void Image::setName(std::string _name)
+void Image::setPath(std::string _name)
 {
-	name = _name;
+	this->path = _name;
 }
 
-bool Image::loadImage()
+void Image::loadImage()
 {
 	try {
-		Mat img = imread(this->name);
-		if (img.empty()) {
-			return false;
+		this->img = imread(this->path);
+		if (this->img.empty()) {
+			this->loaded = false;
 		}
 		else {
 			namedWindow("image", WINDOW_NORMAL);
-			imshow("image", img);
+			imshow("image", this->img);
 			waitKey(0);
-			return true;
+			this->loaded = true;
 		}
 	}
 	catch (std::exception e) {
-		return false;
+		this->loaded = false;
 	}
 }
 
-void Image::copy(Image* _image)
+bool Image::isLoaded()
+{
+	return this->loaded;
+}
+Mat Image::getImage()
+{
+	return this->img;
+}
+
+void Image::copy()
 {
 	
 }
 
-void Image::setGaussian(Image* _image)
+void Image::setGaussian()
 {
-	std::string src = _image->getName();
-	//GaussianBlur(src,"",5,5,5,5);		/* N'arrive pas à grérer un string en entrée */
+	// std::string src = _image->getName();
+	// GaussianBlur(src,"",5,5,5,5);		/* N'arrive pas à grérer un string en entrée */
 }

@@ -1,6 +1,6 @@
 #include "controller.h"
 
-Controller::Controller() : currentScreen(0)
+Controller::Controller() : currentScreen(0), img(new Image())
 {
 }
 
@@ -16,4 +16,8 @@ void Controller::setScreen(const int& idViews)
 int Controller::getCurrentScreen()
 {
 	return this->currentScreen;
+}
+
+Image* Controller::getImage() {
+	return this->img;
 }

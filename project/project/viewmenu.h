@@ -1,7 +1,6 @@
 #pragma once
 #include "view.h"
 #include "controller.h"
-#include "image.h"
 
 class ViewMenu : public View
 {
