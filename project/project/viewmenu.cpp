@@ -19,7 +19,6 @@ void ViewMenu::display()
 	std::string command = "TITLE ";
 	std::string titleCommand = command + this->getTitle();
 	system(titleCommand.c_str());
-	int choice = 0;
 	std::string name;
 	Image* img = new Image();
 	bool imageLoaded = false;
@@ -33,7 +32,7 @@ void ViewMenu::display()
 		if (!imageLoaded)
 			std::cout << "Impossible de trouver l'image." << std::endl;
 	} while (!imageLoaded);
-	choice = 0;
+	int choice = 0;
 	while (choice != 9) {
 		this->clear();
 		std::cout << "\t\tMenu" << std::endl << std::endl;
@@ -46,7 +45,15 @@ void ViewMenu::display()
 		std::cout << "7. Operations de seuillages" << std::endl;
 		std::cout << "8. Segmentation par croissance de region" << std::endl << std::endl;
 		std::cout << "9. Quitter" << std::endl;
-		std::cin >> choice;
+		std::string input;
+		std::cin >> input;
+		try {
+			choice = std::stoi(input);
+		}
+		catch (std::exception e) {
+			choice = 0;
+		}
+
 	}
 	this->controller->setScreen(choice);
 }
