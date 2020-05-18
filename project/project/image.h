@@ -9,10 +9,9 @@ private:
 public:
 	Image();
 	std::string getName();
-	int getStatut();
 	void setName(std::string _name);
-	void loadImage();
+	bool loadImage();
 	void copy(Image* _image);
-	void setGaussian(Image* _image)
+	void setGaussian(Image* _image);
 };
 
