@@ -16,4 +16,5 @@ public:
 	cv::Mat getImage();
 	void copy();
 	void setGaussian();
+	void save();
 };

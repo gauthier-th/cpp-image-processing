@@ -21,13 +21,12 @@ void Image::loadImage()
 {
 	try {
 		this->img = imread(this->path);
-		if (this->img.empty()) {
+		if (this->img.empty())
 			this->loaded = false;
-		}
 		else {
-			namedWindow("image", WINDOW_NORMAL);
+			/*namedWindow("image", WINDOW_NORMAL);
 			imshow("image", this->img);
-			waitKey(0);
+			waitKey(0);*/
 			this->loaded = true;
 		}
 	}
@@ -52,6 +51,13 @@ void Image::copy()
 
 void Image::setGaussian()
 {
-	// std::string src = _image->getName();
-	// GaussianBlur(src,"",5,5,5,5);		/* N'arrive pas à grérer un string en entrée */
+	cv::Mat dst;
+	for (int i = 1; i < 31; i = i + 2) {
+		medianBlur(this->getImage().clone(), this->img, i);
+	}
+}
+
+void Image::save()
+{
+	imwrite("./Image.jpg", this->img);
 }

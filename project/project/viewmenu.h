@@ -10,4 +10,5 @@ public:
 	ViewMenu(const std::string& _title, Controller* _controller);
 	void notify();
 	void display();
+	void displayMenu();
 };

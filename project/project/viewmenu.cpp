@@ -21,26 +21,36 @@ void ViewMenu::display()
 	system(titleCommand.c_str());
 	int choice = 0;
 	while (choice != 9) {
-		this->clear();
-		std::cout << "\t\tMenu" << std::endl << std::endl;
-		std::cout << "1. Filtre Median" << std::endl;
-		std::cout << "2. Filtre Gausien" << std::endl << std::endl;
-		std::cout << "3. Calcul du gradient dans une image" << std::endl << std::endl;
-		std::cout << "4. Dilatation" << std::endl;
-		std::cout << "5. Erosion" << std::endl << std::endl;
-		std::cout << "6. Application d'un detecteur de contours" << std::endl << std::endl;
-		std::cout << "7. Operations de seuillages" << std::endl;
-		std::cout << "8. Segmentation par croissance de region" << std::endl << std::endl;
-		std::cout << "9. Quitter" << std::endl;
-		std::string input;
-		std::cin >> input;
-		try {
-			choice = std::stoi(input);
+		while (choice < 1 || choice > 9) {
+			this->displayMenu();
+			std::string input;
+			std::cin >> input;
+			try {
+				choice = std::stoi(input);
+			}
+			catch (std::exception e) {
+				choice = 0;
+			}
 		}
-		catch (std::exception e) {
-			choice = 0;
-		}
-
+		this->displayMenu();
+		if (choice != 9)
+			this->controller->setScreen(choice + 1);
 	}
-	this->controller->setScreen(choice + 1);
+	this->controller->getImage()->save();
+	exit(0);
+}
+
+void ViewMenu::displayMenu()
+{
+	this->clear();
+	std::cout << "\t\tMenu" << std::endl << std::endl;
+	std::cout << "1. Filtre Median" << std::endl;
+	std::cout << "2. Filtre Gausien" << std::endl << std::endl;
+	std::cout << "3. Calcul du gradient dans une image" << std::endl << std::endl;
+	std::cout << "4. Dilatation" << std::endl;
+	std::cout << "5. Erosion" << std::endl << std::endl;
+	std::cout << "6. Application d'un detecteur de contours" << std::endl << std::endl;
+	std::cout << "7. Operations de seuillages" << std::endl;
+	std::cout << "8. Segmentation par croissance de region" << std::endl << std::endl;
+	std::cout << "9. Sauvegarder et quitter" << std::endl;
 }

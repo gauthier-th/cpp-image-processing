@@ -148,6 +148,7 @@
     <ClCompile Include="observer.cpp" />
     <ClCompile Include="subject.cpp" />
     <ClCompile Include="view.cpp" />
+    <ClCompile Include="viewmedianblur.cpp" />
     <ClCompile Include="viewpathinput.cpp" />
     <ClCompile Include="viewmenu.cpp" />
   </ItemGroup>
@@ -158,6 +159,7 @@
     <ClInclude Include="observer.h" />
     <ClInclude Include="subject.h" />
     <ClInclude Include="view.h" />
+    <ClInclude Include="viewmedianblur.h" />
     <ClInclude Include="viewpathinput.h" />
     <ClInclude Include="viewmenu.h" />
   </ItemGroup>
