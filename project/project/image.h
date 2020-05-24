@@ -17,6 +17,7 @@ public:
 	void copy();
 	void setMedian(int _ksize);
 	void setGaussian(int _ksize);
+	void setGradient();
 	void save();
 	void display(std::string window_name);
 };

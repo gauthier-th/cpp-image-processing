@@ -10,6 +10,7 @@ Application::Application()
 	this->viewPathInput = new ViewPathInput("Selection de l'image", this->controller);
 	this->viewMedianBlur = new ViewMedianBlur("Filtre median", *this->controller);
 	this->viewGaussianBlur = new ViewGaussianBlur("Filtre gaussien", *this->controller);
+	this->viewGradient = new ViewGradient("Calcule de gradient", *this->controller);
 	this->viewPreview = new ViewPreview("Apercu de l'image", *this->controller);
 }
 

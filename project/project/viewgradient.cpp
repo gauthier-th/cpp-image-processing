@@ -26,5 +26,7 @@ void ViewGradient::notify()
  */
 void ViewGradient::display()
 {
-    /** TO DO **/
+    std::cout << std::endl << "Application du filtre en cours..." << std::endl;
+    this->controller.getImage()->setGradient();
+    this->controller.setScreen(1);
 }

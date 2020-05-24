@@ -64,6 +64,28 @@ void Image::setGaussian(int _ksize)
 	GaussianBlur(this->getImage().clone(), this->img, cv::Size(_ksize, _ksize), 0, 0);
 }
 
+void Image::setGradient()
+{
+	int scale = 1;
+	int delta = 0;
+	int ddepth = CV_16S;
+
+	Mat grad_x, grad_y;
+	Mat abs_grad_x, abs_grad_y;
+
+	/// Gradient X
+	Sobel(this->img, grad_x, ddepth, 1, 0, 3, scale, delta, BORDER_DEFAULT);
+	convertScaleAbs(grad_x, abs_grad_x);
+
+	/// Gradient Y
+	Sobel(this->img, grad_y, ddepth, 0, 1, 3, scale, delta, BORDER_DEFAULT);
+	convertScaleAbs(grad_y, abs_grad_y);
+
+	/// Total Gradient (approximate)
+	addWeighted(abs_grad_x, 0.5, abs_grad_y, 0.5, 0, this->img);
+
+}
+
 void Image::save()
 {
 	imwrite("./Image.jpg", this->img);
