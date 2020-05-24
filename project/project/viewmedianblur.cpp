@@ -17,7 +17,7 @@ ViewMedianBlur::ViewMedianBlur(const std::string& _title, Controller& _controlle
  */
 void ViewMedianBlur::notify()
 {
-	if (this->controller.getCurrentScreen() == 3)
+	if (this->controller.getCurrentScreen() == 2)
 		this->display();
 }
 

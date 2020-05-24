@@ -20,8 +20,8 @@ void ViewMenu::display()
 	std::string titleCommand = command + this->getTitle();
 	system(titleCommand.c_str());
 	int choice = 0;
-	while (choice != 9) {
-		while (choice < 1 || choice > 9) {
+	while (choice != 10) {
+		while (choice < 1 || choice > 10) {
 			this->displayMenu();
 			std::string input;
 			std::cin >> input;
@@ -33,8 +33,9 @@ void ViewMenu::display()
 			}
 		}
 		this->displayMenu();
-		if (choice != 9)
+		if (choice != 10)
 			this->controller->setScreen(choice + 1);
+		std::cout << choice + 1 << std::endl;
 	}
 	this->controller->getImage()->save();
 	exit(0);
@@ -44,13 +45,14 @@ void ViewMenu::displayMenu()
 {
 	this->clear();
 	std::cout << "\t\tMenu" << std::endl << std::endl;
-	std::cout << "1. Filtre Median" << std::endl;
-	std::cout << "2. Filtre Gausien" << std::endl << std::endl;
-	std::cout << "3. Calcul du gradient dans une image" << std::endl << std::endl;
-	std::cout << "4. Dilatation" << std::endl;
-	std::cout << "5. Erosion" << std::endl << std::endl;
-	std::cout << "6. Application d'un detecteur de contours" << std::endl << std::endl;
-	std::cout << "7. Operations de seuillages" << std::endl;
-	std::cout << "8. Segmentation par croissance de region" << std::endl << std::endl;
-	std::cout << "9. Sauvegarder et quitter" << std::endl;
+	std::cout << "1.  Filtre Median" << std::endl;
+	std::cout << "2.  Filtre Gausien" << std::endl << std::endl;
+	std::cout << "3.  Calcul du gradient dans une image" << std::endl << std::endl;
+	std::cout << "4.  Dilatation" << std::endl;
+	std::cout << "5.  Erosion" << std::endl << std::endl;
+	std::cout << "6.  Application d'un detecteur de contours" << std::endl << std::endl;
+	std::cout << "7.  Operations de seuillages" << std::endl;
+	std::cout << "8.  Segmentation par croissance de region" << std::endl << std::endl;
+	std::cout << "9.  Apercu de l'image" << std::endl;
+	std::cout << "10. Sauvegarder et quitter" << std::endl;
 }

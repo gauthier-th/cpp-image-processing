@@ -17,7 +17,7 @@ ViewGaussianBlur::ViewGaussianBlur(const std::string& _title, Controller& _contr
  */
 void ViewGaussianBlur::notify()
 {
-    if (this->controller.getCurrentScreen() == 2)
+    if (this->controller.getCurrentScreen() == 3)
         this->display();
 }
 

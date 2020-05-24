@@ -51,23 +51,28 @@ void Image::copy()
 
 void Image::setMedian(int _ksize)
 {
-	if (_ksize % 2 != 1) {
+	if (_ksize % 2 != 1)
 		_ksize = _ksize + 1;
-	}
 	cv::Mat dst;
-		medianBlur(this->getImage().clone(), this->img, _ksize);
+	medianBlur(this->getImage().clone(), this->img, _ksize);
 }
 
 void Image::setGaussian(int _ksize)
 {
-	if (_ksize % 2 != 1) {
+	if (_ksize % 2 != 1)
 		_ksize = _ksize + 1;
-	}
-	cv::Mat dst;
-		GaussianBlur(this->getImage().clone(), this->img, _ksize);  /* Problème avec le ksize */
+	GaussianBlur(this->getImage().clone(), this->img, cv::Size(_ksize, _ksize), 0, 0);
 }
 
 void Image::save()
 {
 	imwrite("./Image.jpg", this->img);
+}
+
+void Image::display(std::string window_name)
+{
+	namedWindow(window_name, WINDOW_AUTOSIZE);
+	imshow(window_name, this->img);
+	waitKey(0);
+	destroyWindow(window_name);
 }

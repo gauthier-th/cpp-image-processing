@@ -7,6 +7,7 @@
 #include "viewgradient.h"
 #include "viewdilatation.h"
 #include "viewerosion.h"
+#include "viewpreview.h"
 
 class Application
 {
@@ -19,6 +20,7 @@ private:
 	ViewGradient* viewGradient;
 	ViewDilatation* viewDilatation;
 	ViewErosion* viewErosion;
+	ViewPreview* viewPreview;
 public:
 	/**
 	 * Constructor

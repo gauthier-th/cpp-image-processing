@@ -18,4 +18,5 @@ public:
 	void setMedian(int _ksize);
 	void setGaussian(int _ksize);
 	void save();
+	void display(std::string window_name);
 };
