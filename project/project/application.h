@@ -3,6 +3,10 @@
 #include "viewmenu.h"
 #include "viewpathinput.h"
 #include "viewmedianblur.h"
+#include "viewgaussianblur.h"
+#include "viewgradient.h"
+#include "viewdilatation.h"
+#include "viewerosion.h"
 
 class Application
 {
@@ -11,6 +15,10 @@ private:
 	ViewMenu* viewMenu;
 	ViewPathInput* viewPathInput;
 	ViewMedianBlur* viewMedianBlur;
+	ViewGaussianBlur* viewGaussianBlur;
+	ViewGradient* viewGradient;
+	ViewDilatation* viewDilatation;
+	ViewErosion* viewErosion;
 public:
 	/**
 	 * Constructor

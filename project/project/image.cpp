@@ -49,12 +49,22 @@ void Image::copy()
 	
 }
 
-void Image::setGaussian()
+void Image::setMedian(int _ksize)
 {
-	cv::Mat dst;
-	for (int i = 1; i < 31; i = i + 2) {
-		medianBlur(this->getImage().clone(), this->img, i);
+	if (_ksize % 2 != 1) {
+		_ksize = _ksize + 1;
 	}
+	cv::Mat dst;
+		medianBlur(this->getImage().clone(), this->img, _ksize);
+}
+
+void Image::setGaussian(int _ksize)
+{
+	if (_ksize % 2 != 1) {
+		_ksize = _ksize + 1;
+	}
+	cv::Mat dst;
+		GaussianBlur(this->getImage().clone(), this->img, _ksize);  /* Problème avec le ksize */
 }
 
 void Image::save()

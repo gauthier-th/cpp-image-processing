@@ -148,6 +148,10 @@
     <ClCompile Include="observer.cpp" />
     <ClCompile Include="subject.cpp" />
     <ClCompile Include="view.cpp" />
+    <ClCompile Include="viewdilatation.cpp" />
+    <ClCompile Include="viewerosion.cpp" />
+    <ClCompile Include="viewgaussianblur.cpp" />
+    <ClCompile Include="viewgradient.cpp" />
     <ClCompile Include="viewmedianblur.cpp" />
     <ClCompile Include="viewpathinput.cpp" />
     <ClCompile Include="viewmenu.cpp" />
@@ -159,6 +163,10 @@
     <ClInclude Include="observer.h" />
     <ClInclude Include="subject.h" />
     <ClInclude Include="view.h" />
+    <ClInclude Include="viewdilatation.h" />
+    <ClInclude Include="viewerosion.h" />
+    <ClInclude Include="viewgaussianblur.h" />
+    <ClInclude Include="viewgradient.h" />
     <ClInclude Include="viewmedianblur.h" />
     <ClInclude Include="viewpathinput.h" />
     <ClInclude Include="viewmenu.h" />

@@ -15,6 +15,7 @@ public:
 	bool isLoaded();
 	cv::Mat getImage();
 	void copy();
-	void setGaussian();
+	void setMedian(int _ksize);
+	void setGaussian(int _ksize);
 	void save();
 };

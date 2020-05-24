@@ -1,4 +1,3 @@
-#pragma once
 #include "view.h"
 #include "controller.h";
 
