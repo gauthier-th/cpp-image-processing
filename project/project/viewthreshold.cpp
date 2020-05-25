@@ -33,16 +33,16 @@ void ViewThreshold::display()
        4: Threshold to Zero Inverted */
     std::cout << std::endl;
     std::cout << "Types de seuillage :" << std::endl;
-    std::cout << "    1. binaire" << std::endl;
-    std::cout << "    2. binaire inverse" << std::endl;
-    std::cout << "    3. seuil tronque" << std::endl;
-    std::cout << "    4. seuil a zero" << std::endl;
-    std::cout << "    5. seuil a zero inverse" << std::endl;
+    std::cout << "    1. Binaire" << std::endl;
+    std::cout << "    2. Binaire inverse" << std::endl;
+    std::cout << "    3. Seuil tronque" << std::endl;
+    std::cout << "    4. Seuil a zero" << std::endl;
+    std::cout << "    5. Seuil a zero inverse" << std::endl;
     std::cout << std::endl << "Merci d'indiquer le type de seuillage (1, 2, 3, 4 ou 5) :" << std::endl;
     int threshold_type;
     std::cin >> threshold_type;
 
-    std::cout << "Merci d'indiquer un entier qui definira l'intensite de la dilatation :" << std::endl;
+    std::cout << "Merci d'indiquer un entier qui definira l'intensite du traitement :" << std::endl;
     int threshold_value;
     std::cin >> threshold_value;
     if (threshold_value % 2 == 0)

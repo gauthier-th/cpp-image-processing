@@ -28,10 +28,10 @@ void ViewErosion::display()
 {
     std::cout << std::endl;
     std::cout << "Types d'erosions :" << std::endl;
-    std::cout << "    1. rectangulaire" << std::endl;
-    std::cout << "    2. en croix" << std::endl;
-    std::cout << "    3. circulaire" << std::endl;
-    std::cout << std::endl << "Merci d'indiquer le type d'erosions (1, 2 ou 3) :" << std::endl;
+    std::cout << "    1. Rectangulaire" << std::endl;
+    std::cout << "    2. En croix" << std::endl;
+    std::cout << "    3. Circulaire" << std::endl;
+    std::cout << std::endl << "Merci d'indiquer le type d'erosion (1, 2 ou 3) :" << std::endl;
     int c1;
     std::cin >> c1;
     int erosion_type;
@@ -42,7 +42,7 @@ void ViewErosion::display()
     else
         erosion_type = cv::MORPH_RECT;
 
-    std::cout << "Merci d'indiquer un entier qui definira l'intensite de l'erosions :" << std::endl;
+    std::cout << "Merci d'indiquer un entier qui definira l'intensite de l'erosion :" << std::endl;
     int erosion_size;
     std::cin >> erosion_size;
 
