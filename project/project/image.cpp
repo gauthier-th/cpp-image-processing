@@ -86,6 +86,18 @@ void Image::setGradient()
 
 }
 
+void Image::setDilation(int dilation_type, int dilation_size)
+{
+	Mat element = getStructuringElement(dilation_type, Size(2 * dilation_size + 1, 2 * dilation_size + 1), Point(dilation_size, dilation_size));
+	dilate(this->img, this->img, element);
+}
+
+void Image::setErosion(int erosion_type, int erosion_size)
+{
+	Mat element = getStructuringElement(erosion_type, Size(2 * erosion_size + 1, 2 * erosion_size + 1), Point(erosion_size, erosion_size));
+	erode(this->img, this->img, element);
+}
+
 void Image::save()
 {
 	imwrite("./Image.jpg", this->img);

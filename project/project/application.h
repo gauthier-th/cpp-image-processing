@@ -5,7 +5,7 @@
 #include "viewmedianblur.h"
 #include "viewgaussianblur.h"
 #include "viewgradient.h"
-#include "viewdilatation.h"
+#include "viewdilation.h"
 #include "viewerosion.h"
 #include "viewpreview.h"
 
@@ -18,7 +18,7 @@ private:
 	ViewMedianBlur* viewMedianBlur;
 	ViewGaussianBlur* viewGaussianBlur;
 	ViewGradient* viewGradient;
-	ViewDilatation* viewDilatation;
+	ViewDilation* viewDilation;
 	ViewErosion* viewErosion;
 	ViewPreview* viewPreview;
 public:
