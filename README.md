@@ -8,23 +8,23 @@ Notre application permet d’effectuer différents traitements sur une image sou
 
 ## Traitements d'image disponibles
 
- ▪ Filtrage : 
-- *Filtre médian* 
-- *Filtre gaussien* 
+**▪ Filtrage :** 
+- Filtre médian
+- Filtre gaussien
 
-▪ Dérivation :
-- *Calcul du gradient dans une image (Sobel)* 
+**▪ Dérivation :**
+- Calcul du gradient dans une image (Sobel)
 
-▪ Opérations de morphologie mathématique :  
-- *Dilatation* 
-- *Érosion* 
+**▪ Opérations de morphologie mathématique :**
+- Dilatation 
+- Érosion
 
-▪ Détection de contours :  
-- *Application d’un détecteur de contours « Canny »* 
+**▪ Détection de contours :**  
+- Application d’un détecteur de contours « Canny »
 
-▪ Segmentations d’images :  
-- *Opérations de seuillages* 
-- *Segmentation par croissance de région*
+**▪ Segmentations d’images :**  
+- Opérations de seuillages 
+- Segmentation par croissance de région
 
 ## Diagramme UML 
 
