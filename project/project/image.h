@@ -20,7 +20,7 @@ public:
 	void setGradient();
 	void setDilation(int dilation_type, int dilation_size);
 	void setErosion(int erosion_type, int erosion_size);
-	void setContours();
+	void setContours(int thresh);
 	void save();
 	void display(std::string window_name);
 };

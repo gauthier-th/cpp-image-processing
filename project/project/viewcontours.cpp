@@ -17,7 +17,7 @@ ViewContours::ViewContours(const std::string& _title, Controller& _controller)
  */
 void ViewContours::notify()
 {
-    if (this->controller.getCurrentScreen() == 6)
+    if (this->controller.getCurrentScreen() == 7)
         this->display();
 }
 
@@ -26,7 +26,10 @@ void ViewContours::notify()
  */
 void ViewContours::display()
 {
+    std::cout << std::endl << "Merci d'indiquer un entier qui definira l'intensite de la dilatation :" << std::endl;
+    int thresh;
+    std::cin >> thresh;
     std::cout << std::endl << "Application du filtre en cours..." << std::endl;
-    this->controller.getImage()->setGradient();
+    this->controller.getImage()->setContours(thresh);
     this->controller.setScreen(1);
 }

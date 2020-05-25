@@ -1,4 +1,8 @@
 #include "image.h"
+#include "opencv2/highgui/highgui.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
+#include <stdio.h>
+#include <stdlib.h>
 #include <iostream>
 
 using namespace cv;
@@ -98,9 +102,27 @@ void Image::setErosion(int erosion_type, int erosion_size)
 	erode(this->img, this->img, element);
 }
 
-void Image::setContours()
+void Image::setContours(int thresh)
 {
-	/*TO DO*/
+	RNG rng(12345);
+	Mat canny_output;
+	std::vector<std::vector<Point> > contours;
+	std::vector<Vec4i> hierarchy;
+
+	// Detect edges using canny
+	Canny(this->img, canny_output, thresh, thresh * 2, 3);
+	// Find contours
+	findContours(canny_output, contours, hierarchy, RETR_TREE, CHAIN_APPROX_SIMPLE, Point(0, 0));
+
+	// Draw contours
+	Mat drawing = Mat::zeros(canny_output.size(), CV_8UC3);
+	for (int i = 0; i < contours.size(); i++)
+	{
+		Scalar color = Scalar(rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255));
+		drawContours(drawing, contours, i, color, 2, 8, hierarchy, 0, Point());
+	}
+
+	this->img = canny_output;
 }
 
 void Image::save()
