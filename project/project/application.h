@@ -8,6 +8,7 @@
 #include "viewerosion.h"
 #include "viewcontours.h"
 #include "viewthreshold.h"
+#include "viewprevious.h"
 #include "viewpreview.h"
 
 class Application
@@ -23,6 +24,7 @@ private:
 	ViewErosion* viewErosion;
 	ViewContours* viewContours;
 	ViewThreshold* viewThreshold;
+	ViewPrevious* viewPrevious;
 	ViewPreview* viewPreview;
 public:
 	/**

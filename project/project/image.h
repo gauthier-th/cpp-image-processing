@@ -1,4 +1,5 @@
 #include <string>
+#include <vector>
 #include <opencv2/opencv.hpp>
 
 class Image
@@ -6,7 +7,8 @@ class Image
 private:
 	std::string path;
 	bool loaded = false;
-	cv::Mat img;
+	std::vector<cv::Mat> images;
+	void setImage(cv::Mat image);
 public:
 	Image();
 	std::string getPath();
@@ -14,7 +16,7 @@ public:
 	void loadImage();
 	bool isLoaded();
 	cv::Mat getImage();
-	void copy();
+	void previous();
 	void setMedian(int _ksize);
 	void setGaussian(int _ksize);
 	void setGradient();

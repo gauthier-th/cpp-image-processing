@@ -20,8 +20,8 @@ void ViewMenu::display()
 	std::string titleCommand = command + this->getTitle();
 	system(titleCommand.c_str());
 	int choice = 0;
-	while (choice != 10) {
-		while (choice < 1 || choice > 10) {
+	while (choice != 11) {
+		while (choice < 1 || choice > 11) {
 			this->displayMenu();
 			std::string input;
 			std::cin >> input;
@@ -33,7 +33,7 @@ void ViewMenu::display()
 			}
 		}
 		this->displayMenu();
-		if (choice != 10)
+		if (choice != 11)
 			this->controller->setScreen(choice + 1);
 		std::cout << choice + 1 << std::endl;
 	}
@@ -53,6 +53,7 @@ void ViewMenu::displayMenu()
 	std::cout << "6.  Application d'un detecteur de contours" << std::endl << std::endl;
 	std::cout << "7.  Operations de seuillages" << std::endl;
 	std::cout << "8.  Segmentation par croissance de region" << std::endl << std::endl;
-	std::cout << "9.  Apercu de l'image" << std::endl;
-	std::cout << "10. Sauvegarder et quitter" << std::endl;
+	std::cout << "9.  Apercu de l'image" << std::endl << std::endl;
+	std::cout << "10. Annuler la derniere operation" << std::endl;
+	std::cout << "11. Sauvegarder et quitter" << std::endl;
 }

@@ -9,6 +9,7 @@ using namespace cv;
 
 Image::Image()
 {
+	this->images = std::vector<cv::Mat>();
 }
 
 std::string Image::getPath()
@@ -24,13 +25,12 @@ void Image::setPath(std::string _name)
 void Image::loadImage()
 {
 	try {
-		this->img = imread(this->path);
-		if (this->img.empty())
+		Mat img;
+		img = imread(this->path);
+		if (img.empty())
 			this->loaded = false;
 		else {
-			/*namedWindow("image", WINDOW_NORMAL);
-			imshow("image", this->img);
-			waitKey(0);*/
+			this->setImage(img);
 			this->loaded = true;
 		}
 	}
@@ -45,12 +45,21 @@ bool Image::isLoaded()
 }
 Mat Image::getImage()
 {
-	return this->img;
+	if (this->images.size() == 0)
+		return Mat();
+	else
+		return this->images[this->images.size() - 1];
 }
 
-void Image::copy()
+void Image::setImage(cv::Mat image)
 {
-	
+	this->images.push_back(image);
+}
+
+void Image::previous()
+{
+	if (this->images.size() > 0)
+		this->images.pop_back();
 }
 
 void Image::setMedian(int _ksize)
@@ -58,14 +67,17 @@ void Image::setMedian(int _ksize)
 	if (_ksize % 2 != 1)
 		_ksize = _ksize + 1;
 	cv::Mat dst;
-	medianBlur(this->getImage().clone(), this->img, _ksize);
+	medianBlur(this->getImage().clone(), dst, _ksize);
+	this->setImage(dst);
 }
 
 void Image::setGaussian(int _ksize)
 {
 	if (_ksize % 2 != 1)
 		_ksize = _ksize + 1;
-	GaussianBlur(this->getImage().clone(), this->img, cv::Size(_ksize, _ksize), 0, 0);
+	cv::Mat dst;
+	GaussianBlur(this->getImage().clone(), dst, cv::Size(_ksize, _ksize), 0, 0);
+	this->setImage(dst);
 }
 
 void Image::setGradient()
@@ -77,29 +89,36 @@ void Image::setGradient()
 	Mat grad_x, grad_y;
 	Mat abs_grad_x, abs_grad_y;
 
+	cv::Mat img = this->getImage();
+
 	/// Gradient X
-	Sobel(this->img, grad_x, ddepth, 1, 0, 3, scale, delta, BORDER_DEFAULT);
+	Sobel(img, grad_x, ddepth, 1, 0, 3, scale, delta, BORDER_DEFAULT);
 	convertScaleAbs(grad_x, abs_grad_x);
 
 	/// Gradient Y
-	Sobel(this->img, grad_y, ddepth, 0, 1, 3, scale, delta, BORDER_DEFAULT);
+	Sobel(img, grad_y, ddepth, 0, 1, 3, scale, delta, BORDER_DEFAULT);
 	convertScaleAbs(grad_y, abs_grad_y);
 
 	/// Total Gradient (approximate)
-	addWeighted(abs_grad_x, 0.5, abs_grad_y, 0.5, 0, this->img);
-
+	addWeighted(abs_grad_x, 0.5, abs_grad_y, 0.5, 0, img);
+	
+	this->setImage(img);
 }
 
 void Image::setDilation(int dilation_type, int dilation_size)
 {
+	cv::Mat dst;
 	Mat element = getStructuringElement(dilation_type, Size(2 * dilation_size + 1, 2 * dilation_size + 1), Point(dilation_size, dilation_size));
-	dilate(this->img, this->img, element);
+	dilate(this->getImage(), dst, element);
+	this->setImage(dst);
 }
 
 void Image::setErosion(int erosion_type, int erosion_size)
 {
+	cv::Mat dst;
 	Mat element = getStructuringElement(erosion_type, Size(2 * erosion_size + 1, 2 * erosion_size + 1), Point(erosion_size, erosion_size));
-	erode(this->img, this->img, element);
+	erode(this->getImage(), dst, element);
+	this->setImage(dst);
 }
 
 void Image::setContours(int thresh)
@@ -108,9 +127,10 @@ void Image::setContours(int thresh)
 	Mat canny_output;
 	std::vector<std::vector<Point> > contours;
 	std::vector<Vec4i> hierarchy;
+	cv::Mat img = this->getImage();
 
 	// Detect edges using canny
-	Canny(this->img, canny_output, thresh, thresh * 2, 3);
+	Canny(img, canny_output, thresh, thresh * 2, 3);
 	// Find contours
 	findContours(canny_output, contours, hierarchy, RETR_TREE, CHAIN_APPROX_SIMPLE, Point(0, 0));
 
@@ -122,25 +142,27 @@ void Image::setContours(int thresh)
 		drawContours(drawing, contours, i, color, 2, 8, hierarchy, 0, Point());
 	}
 
-	this->img = canny_output;
+	this->setImage(canny_output);
 }
 
 void Image::setThreshold(int threshold_type, int threshold_value)
 {
-	cvtColor(this->img, this->img, COLOR_BGR2GRAY);
-	this->display("test");
-	threshold(this->img, this->img, threshold_value, 255, threshold_type);
+	cv::Mat img = this->getImage();
+	cvtColor(img, img, COLOR_BGR2GRAY);
+	threshold(img, img, threshold_value, 255, threshold_type);
+	this->setImage(img);
 }
 
 void Image::save()
 {
-	imwrite("./Image.jpg", this->img);
+	imwrite("./Image.jpg", this->getImage());
 }
 
 void Image::display(std::string window_name)
 {
+	Mat img = this->getImage();
 	namedWindow(window_name, WINDOW_AUTOSIZE);
-	imshow(window_name, this->img);
+	imshow(window_name, img);
 	waitKey(0);
 	destroyWindow(window_name);
 }

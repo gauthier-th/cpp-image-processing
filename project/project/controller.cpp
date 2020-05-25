@@ -6,7 +6,7 @@ Controller::Controller() : currentScreen(0), img(new Image())
 
 void Controller::setScreen(const int& idViews)
 {
-	if (idViews >= 0 && idViews <= 10)
+	if (idViews >= 0 && idViews <= 11)
 	{
 		this->currentScreen = idViews;
 		this->notify();

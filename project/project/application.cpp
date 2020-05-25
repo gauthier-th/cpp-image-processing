@@ -14,6 +14,7 @@ Application::Application()
 	this->viewDilation = new ViewDilation("Dilatation", *this->controller);
 	this->viewContours = new ViewContours("Contours", *this->controller);
 	this->viewThreshold = new ViewThreshold("Operations de seuillage", *this->controller);
+	this->viewPrevious = new ViewPrevious("Operation precedente", *this->controller);
 	this->viewPreview = new ViewPreview("Apercu de l'image", *this->controller);
 }
 
