@@ -157,6 +157,7 @@
     <ClCompile Include="viewpathinput.cpp" />
     <ClCompile Include="viewmenu.cpp" />
     <ClCompile Include="viewpreview.cpp" />
+    <ClCompile Include="viewthreshold.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />
@@ -174,6 +175,7 @@
     <ClInclude Include="viewpathinput.h" />
     <ClInclude Include="viewmenu.h" />
     <ClInclude Include="viewpreview.h" />
+    <ClInclude Include="viewthreshold.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

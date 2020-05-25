@@ -125,6 +125,13 @@ void Image::setContours(int thresh)
 	this->img = canny_output;
 }
 
+void Image::setThreshold(int threshold_type, int threshold_value)
+{
+	cvtColor(this->img, this->img, COLOR_BGR2GRAY);
+	this->display("test");
+	threshold(this->img, this->img, threshold_value, 255, threshold_type);
+}
+
 void Image::save()
 {
 	imwrite("./Image.jpg", this->img);

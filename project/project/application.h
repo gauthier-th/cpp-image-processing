@@ -6,8 +6,9 @@
 #include "viewgradient.h"
 #include "viewdilation.h"
 #include "viewerosion.h"
-#include "viewpreview.h"
 #include "viewcontours.h"
+#include "viewthreshold.h"
+#include "viewpreview.h"
 
 class Application
 {
@@ -21,6 +22,7 @@ private:
 	ViewDilation* viewDilation;
 	ViewErosion* viewErosion;
 	ViewContours* viewContours;
+	ViewThreshold* viewThreshold;
 	ViewPreview* viewPreview;
 public:
 	/**

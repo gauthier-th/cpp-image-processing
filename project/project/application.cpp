@@ -13,6 +13,7 @@ Application::Application()
 	this->viewGradient = new ViewGradient("Calcule de gradient", *this->controller);
 	this->viewDilation = new ViewDilation("Dilatation", *this->controller);
 	this->viewContours = new ViewContours("Contours", *this->controller);
+	this->viewThreshold = new ViewThreshold("Operations de seuillage", *this->controller);
 	this->viewPreview = new ViewPreview("Apercu de l'image", *this->controller);
 }
 
