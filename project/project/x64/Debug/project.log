@@ -1,2 +1,3 @@
-﻿  image.cpp
+﻿  viewsave.cpp
+C:\Users\thoga\source\repos\cpp-image-processing\project\project\viewsave.h(3,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
   project.vcxproj -> C:\Users\thoga\source\repos\cpp-image-processing\project\x64\Debug\project.exe

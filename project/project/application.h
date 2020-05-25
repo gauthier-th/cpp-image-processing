@@ -10,6 +10,7 @@
 #include "viewthreshold.h"
 #include "viewprevious.h"
 #include "viewpreview.h"
+#include "viewsave.h"
 
 class Application
 {
@@ -26,6 +27,7 @@ private:
 	ViewThreshold* viewThreshold;
 	ViewPrevious* viewPrevious;
 	ViewPreview* viewPreview;
+	ViewSave* viewSave;
 public:
 	/**
 	 * Constructor

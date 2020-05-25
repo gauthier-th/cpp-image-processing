@@ -58,7 +58,7 @@ void Image::setImage(cv::Mat image)
 
 void Image::previous()
 {
-	if (this->images.size() > 0)
+	if (this->images.size() > 1)
 		this->images.pop_back();
 }
 
@@ -153,9 +153,9 @@ void Image::setThreshold(int threshold_type, int threshold_value)
 	this->setImage(img);
 }
 
-void Image::save()
+void Image::save(std::string path)
 {
-	imwrite("./Image.jpg", this->getImage());
+	imwrite(path, this->getImage());
 }
 
 void Image::display(std::string window_name)

@@ -24,6 +24,6 @@ public:
 	void setErosion(int erosion_type, int erosion_size);
 	void setContours(int thresh);
 	void setThreshold(int threshold_type, int threshold_value);
-	void save();
+	void save(std::string path);
 	void display(std::string window_name);
 };

@@ -16,6 +16,7 @@ Application::Application()
 	this->viewThreshold = new ViewThreshold("Operations de seuillage", *this->controller);
 	this->viewPrevious = new ViewPrevious("Operation precedente", *this->controller);
 	this->viewPreview = new ViewPreview("Apercu de l'image", *this->controller);
+	this->viewSave = new ViewSave("Sauvegarder l'image", *this->controller);
 }
 
 /**

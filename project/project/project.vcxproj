@@ -158,6 +158,7 @@
     <ClCompile Include="viewmenu.cpp" />
     <ClCompile Include="viewpreview.cpp" />
     <ClCompile Include="viewprevious.cpp" />
+    <ClCompile Include="viewsave.cpp" />
     <ClCompile Include="viewthreshold.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -177,6 +178,7 @@
     <ClInclude Include="viewmenu.h" />
     <ClInclude Include="viewpreview.h" />
     <ClInclude Include="viewprevious.h" />
+    <ClInclude Include="viewsave.h" />
     <ClInclude Include="viewthreshold.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
