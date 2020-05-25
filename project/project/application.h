@@ -1,4 +1,3 @@
-#pragma once
 #include "controller.h"
 #include "viewmenu.h"
 #include "viewpathinput.h"
@@ -8,6 +7,7 @@
 #include "viewdilation.h"
 #include "viewerosion.h"
 #include "viewpreview.h"
+#include "viewcontours.h"
 
 class Application
 {
@@ -20,6 +20,7 @@ private:
 	ViewGradient* viewGradient;
 	ViewDilation* viewDilation;
 	ViewErosion* viewErosion;
+	ViewContours* viewContours;
 	ViewPreview* viewPreview;
 public:
 	/**

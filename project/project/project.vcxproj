@@ -148,6 +148,7 @@
     <ClCompile Include="observer.cpp" />
     <ClCompile Include="subject.cpp" />
     <ClCompile Include="view.cpp" />
+    <ClCompile Include="viewcontours.cpp" />
     <ClCompile Include="viewdilation.cpp" />
     <ClCompile Include="viewerosion.cpp" />
     <ClCompile Include="viewgaussianblur.cpp" />
@@ -164,6 +165,7 @@
     <ClInclude Include="observer.h" />
     <ClInclude Include="subject.h" />
     <ClInclude Include="view.h" />
+    <ClInclude Include="viewcontours.h" />
     <ClInclude Include="viewdilation.h" />
     <ClInclude Include="viewerosion.h" />
     <ClInclude Include="viewgaussianblur.h" />

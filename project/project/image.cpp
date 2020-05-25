@@ -98,6 +98,11 @@ void Image::setErosion(int erosion_type, int erosion_size)
 	erode(this->img, this->img, element);
 }
 
+void Image::setContours()
+{
+	/*TO DO*/
+}
+
 void Image::save()
 {
 	imwrite("./Image.jpg", this->img);
