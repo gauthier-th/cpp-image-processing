@@ -7,21 +7,34 @@
 
 using namespace cv;
 
+/**
+ * Constructor
+ */
 Image::Image()
 {
 	this->images = std::vector<cv::Mat>();
 }
 
+/**
+ * Get Image Path
+ */
 std::string Image::getPath()
 {
 	return this->path;
 }
 
+/**
+ * Set Image Path
+ * @param _name: Image Path
+ */
 void Image::setPath(std::string _name)
 {
 	this->path = _name;
 }
 
+/**
+ * Load Image by checking the path
+ */
 void Image::loadImage()
 {
 	try {
@@ -39,10 +52,17 @@ void Image::loadImage()
 	}
 }
 
+/**
+ * To set the statut of image loading
+ */
 bool Image::isLoaded()
 {
 	return this->loaded;
 }
+
+/**
+ * Get Image
+ */
 Mat Image::getImage()
 {
 	if (this->images.size() == 0)
@@ -51,17 +71,27 @@ Mat Image::getImage()
 		return this->images[this->images.size() - 1];
 }
 
+/**
+ * Set a new Image 
+ */
 void Image::setImage(cv::Mat image)
 {
 	this->images.push_back(image);
 }
 
+/**
+ * Set the latest version of Image 
+ */
 void Image::previous()
 {
 	if (this->images.size() > 1)
 		this->images.pop_back();
 }
 
+/**
+ * Set a blur Median
+ * @param _ksize: Intensity of blur
+ */
 void Image::setMedian(int _ksize)
 {
 	if (_ksize % 2 != 1)
@@ -71,6 +101,10 @@ void Image::setMedian(int _ksize)
 	this->setImage(dst);
 }
 
+/**
+ * Set a blur Gaussian
+ * @param _ksize: Intensity of blur
+ */
 void Image::setGaussian(int _ksize)
 {
 	if (_ksize % 2 != 1)
@@ -80,6 +114,9 @@ void Image::setGaussian(int _ksize)
 	this->setImage(dst);
 }
 
+/**
+ * Calculates the gradient and applies it to the Image
+ */
 void Image::setGradient()
 {
 	int scale = 1;
@@ -105,6 +142,11 @@ void Image::setGradient()
 	this->setImage(img);
 }
 
+/**
+ * Set a dilation on Image
+ * @param dilation_type: Type of dilatation (rectangular/cross/circular)
+ * @param dilation_size: Size of dilatation
+ */
 void Image::setDilation(int dilation_type, int dilation_size)
 {
 	cv::Mat dst;
@@ -113,6 +155,11 @@ void Image::setDilation(int dilation_type, int dilation_size)
 	this->setImage(dst);
 }
 
+/**
+ * Set a erosion on Image
+ * @param erosion_type: Type of erosion (rectangular/cross/circular)
+ * @param erosion_size: Size of erosion
+ */
 void Image::setErosion(int erosion_type, int erosion_size)
 {
 	cv::Mat dst;
@@ -121,6 +168,10 @@ void Image::setErosion(int erosion_type, int erosion_size)
 	this->setImage(dst);
 }
 
+/**
+ * Find contours on Image
+ * @param thresh: Precision of contours
+ */
 void Image::setContours(int thresh)
 {
 	RNG rng(12345);
@@ -145,6 +196,11 @@ void Image::setContours(int thresh)
 	this->setImage(canny_output);
 }
 
+/**
+ * Set a threshold on Image
+ * @param threshold_type: Type of threshold (binary/inverse binary/truncated threshold/zero threshold/inverse zero threshold)
+ * @param threshold_size: Size of threshold
+ */
 void Image::setThreshold(int threshold_type, int threshold_value)
 {
 	cv::Mat img = this->getImage();
@@ -153,6 +209,10 @@ void Image::setThreshold(int threshold_type, int threshold_value)
 	this->setImage(img);
 }
 
+/**
+ * Set a watershed on Image
+ * @param randomColors: True == RandomColors or False == Black and White
+ */
 void Image::setWatershed(bool randomColors)
 {
 	cv::Mat src = this->getImage();
@@ -249,11 +309,19 @@ void Image::setWatershed(bool randomColors)
 	this->setImage(dst);
 }
 
+/**
+ * Save last Image
+ * @param path: Path out of Image
+ */
 void Image::save(std::string path)
 {
 	imwrite(path, this->getImage());
 }
 
+/**
+ * Diplay Image
+ * @param window_name: Name of the window
+ */
 void Image::display(std::string window_name)
 {
 	Mat img = this->getImage();

@@ -47,6 +47,6 @@ void ViewErosion::display()
     std::cin >> erosion_size;
 
     std::cout << std::endl << "Application du filtre en cours..." << std::endl;
-    this->controller.getImage()->setDilation(erosion_type, erosion_size);
+    this->controller.getImage()->setErosion(erosion_type, erosion_size);
     this->controller.setScreen(1);
 }

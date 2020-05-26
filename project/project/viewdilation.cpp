@@ -28,9 +28,9 @@ void ViewDilation::display()
 {
     std::cout << std::endl;
     std::cout << "Types de dilatations :" << std::endl;
-    std::cout << "    1. rectangulaire" << std::endl;
-    std::cout << "    2. en croix" << std::endl;
-    std::cout << "    3. circulaire" << std::endl;
+    std::cout << "    1. Rectangulaire" << std::endl;
+    std::cout << "    2. En croix" << std::endl;
+    std::cout << "    3. Circulaire" << std::endl;
     std::cout << std::endl << "Merci d'indiquer le type de dilatation (1, 2 ou 3) :" << std::endl;
     int c1;
     std::cin >> c1;
