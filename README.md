@@ -28,7 +28,7 @@ Notre application permet d’effectuer différents traitements sur une image sou
 
 ## Diagramme UML 
 
-![](https://yuml.me/tomrh/uml.png)
+![](https://image.noelshack.com/fichiers/2020/22/2/1590520121-uml.jpg)
 
 ## Utilisation de l'application
 
@@ -46,4 +46,6 @@ De plus, si vous effectué un traitement par erreur, vous avez toujours la possi
 
 **▪ 3ème étape :**
 
-Une fois avoir appliqué les différents traitements à votre image, vous avez la possibilité d'enregistrer l’image à une adresse quelconque dont vous avez la possibilité de spécifier.
+Une fois avoir appliqué les différents traitements à votre image, vous avez la possibilité d'enregistrer l’image à une adresse dont vous avez la possibilité de spécifier.
+À noter qu’il n’y a pas de sauvegarde automatique de l’image, néanmoins vous avez la possibilité d’enregistrer l’image à n’importe quel moment du traitement et autant de fois que nécessaire.
+
