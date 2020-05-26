@@ -26,7 +26,10 @@ void ViewWatershed::notify()
  */
 void ViewWatershed::display()
 {
+    std::cout << std::endl << "Voulez-vous appliquer des couleurs aléatoires aux segments ? (oui/non)" << std::endl;
+    std::string input;
+    std::cin >> input;
     std::cout << std::endl << "Application du filtre en cours..." << std::endl;
-    this->controller.getImage()->setWatershed();
+    this->controller.getImage()->setWatershed(input == "oui");
     this->controller.setScreen(1);
 }
