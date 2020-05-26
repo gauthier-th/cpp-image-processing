@@ -1,3 +1,58 @@
-﻿  viewwatershed.cpp
-C:\Users\thoga\source\repos\cpp-image-processing\project\project\viewwatershed.h(4,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
-  project.vcxproj -> C:\Users\thoga\source\repos\cpp-image-processing\project\x64\Debug\project.exe
+﻿  application.cpp
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewpathinput.h(3,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewmedianblur.h(2,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewgaussianblur.h(2,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewgradient.h(2,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewdilation.h(2,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewerosion.h(2,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewcontours.h(2,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewthreshold.h(3,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewwatershed.h(4,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewprevious.h(3,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewpreview.h(3,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewsave.h(3,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+  controller.cpp
+  image.cpp
+  main.cpp
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewpathinput.h(3,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewmedianblur.h(2,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewgaussianblur.h(2,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewgradient.h(2,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewdilation.h(2,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewerosion.h(2,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewcontours.h(2,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewthreshold.h(3,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewwatershed.h(4,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewprevious.h(3,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewpreview.h(3,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewsave.h(3,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+  observer.cpp
+  subject.cpp
+  view.cpp
+  viewcontours.cpp
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewcontours.h(2,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+  viewdilation.cpp
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewdilation.h(2,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+  viewerosion.cpp
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewerosion.h(2,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+  viewgaussianblur.cpp
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewgaussianblur.h(2,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+  viewgradient.cpp
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewgradient.h(2,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+  viewmedianblur.cpp
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewmedianblur.h(2,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+  viewpathinput.cpp
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewpathinput.h(3,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+  viewmenu.cpp
+  viewpreview.cpp
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewpreview.h(3,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+  viewprevious.cpp
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewprevious.h(3,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+  viewsave.cpp
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewsave.h(3,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+  viewthreshold.cpp
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewthreshold.h(3,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+  viewwatershed.cpp
+C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\project\viewwatershed.h(4,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+  Génération de code en cours...
+  project.vcxproj -> C:\Users\Tom\Documents\GitHub\cpp-image-processing\project\x64\Debug\project.exe

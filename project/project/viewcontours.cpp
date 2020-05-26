@@ -26,7 +26,7 @@ void ViewContours::notify()
  */
 void ViewContours::display()
 {
-    std::cout << std::endl << "Merci d'indiquer un entier qui definira la précision de la détection de contours :" << std::endl;
+    std::cout << std::endl << "Merci d'indiquer un entier qui definira la precision de la detection de contours :" << std::endl;
     int thresh;
     std::cin >> thresh;
     std::cout << std::endl << "Application du filtre en cours..." << std::endl;
