@@ -153,6 +153,14 @@ void Image::setThreshold(int threshold_type, int threshold_value)
 	this->setImage(img);
 }
 
+void Image::setWatershed()
+{
+	cv::Mat img = this->getImage();
+	cvtColor(img, img, COLOR_BGR2GRAY);
+	/*TO DO with https://docs.opencv.org/master/d3/db4/tutorial_py_watershed.html */
+	this->setImage(img);
+}
+
 void Image::save(std::string path)
 {
 	imwrite(path, this->getImage());

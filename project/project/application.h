@@ -8,6 +8,7 @@
 #include "viewerosion.h"
 #include "viewcontours.h"
 #include "viewthreshold.h"
+#include "viewwatershed.h"
 #include "viewprevious.h"
 #include "viewpreview.h"
 #include "viewsave.h"
@@ -25,6 +26,7 @@ private:
 	ViewErosion* viewErosion;
 	ViewContours* viewContours;
 	ViewThreshold* viewThreshold;
+	ViewWatershed* viewWatershed;
 	ViewPrevious* viewPrevious;
 	ViewPreview* viewPreview;
 	ViewSave* viewSave;

@@ -160,6 +160,7 @@
     <ClCompile Include="viewprevious.cpp" />
     <ClCompile Include="viewsave.cpp" />
     <ClCompile Include="viewthreshold.cpp" />
+    <ClCompile Include="viewwatershed.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />
@@ -180,6 +181,7 @@
     <ClInclude Include="viewprevious.h" />
     <ClInclude Include="viewsave.h" />
     <ClInclude Include="viewthreshold.h" />
+    <ClInclude Include="viewwatershed.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
