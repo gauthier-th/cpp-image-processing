@@ -32,7 +32,7 @@ void ViewThreshold::display()
        3: Threshold to Zero
        4: Threshold to Zero Inverted */
     std::cout << std::endl;
-    std::cout << "Types de seuillage :" << std::endl;
+    std::cout << "Types de seuillages :" << std::endl;
     std::cout << "    1. Binaire" << std::endl;
     std::cout << "    2. Binaire inverse" << std::endl;
     std::cout << "    3. Seuil tronque" << std::endl;
