@@ -17,7 +17,7 @@ ViewErosion::ViewErosion(const std::string& _title, Controller& _controller)
  */
 void ViewErosion::notify()
 {
-    if (this->controller.getCurrentScreen() == 4)
+    if (this->controller.getCurrentScreen() == 6)
         this->display();
 }
 
